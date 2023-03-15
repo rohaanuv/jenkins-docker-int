@@ -1,7 +1,5 @@
  pipline {
- 	agent {
- 		lable "built"
- 	}
+ 	agent any
  	stages {
  		stage("install-dep"){
  			steps{
