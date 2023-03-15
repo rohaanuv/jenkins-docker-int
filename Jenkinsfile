@@ -10,7 +10,7 @@
  		}
  		stage("docker-cmds"){
  			steps{ 				
- 				sh "docker run -itdp 80:80 --name nagpur httpd"
+ 				sh "docker run -itdp 8082:80 --name nagpur httpd"
                 sh "docker cp index.html nagpur:/usr/local/apache2/htdocs/"
  			}
  		}
