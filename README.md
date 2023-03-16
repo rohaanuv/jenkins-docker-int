@@ -1,2 +1,2 @@
 # jenkins-docker-int
-intigration of jenkins docker
+intigration of jenkins docker using Jenkins Pipeline
