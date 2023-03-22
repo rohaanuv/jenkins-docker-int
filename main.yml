@@ -1,0 +1,21 @@
+--- #my playbook
+- hosts: mumbai
+  user: ron
+  become: yes
+  gather_facts: yes
+  connection: ssh
+  vars:
+    pkgname: httpd
+    index_path: /var/www/html/
+
+  tasks:
+    - name: install apache
+      action: yum pkg="{{pkgname}}" state=present
+      notify: start service
+
+    - name: deploy index file
+      action: copy src=/mumbai/index.html dest="{{index_path}}"
+
+  handlers:
+    - name: start service
+      action: service name="{{pkgname}}" state=started
