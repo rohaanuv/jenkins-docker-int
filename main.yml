@@ -14,7 +14,7 @@
       notify: start service
 
     - name: deploy index file
-      action: copy src=/index.html dest="{{index_path}}"
+      action: copy src=index.html dest="{{index_path}}"
 
   handlers:
     - name: start service
