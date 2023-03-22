@@ -1,5 +1,5 @@
 --- #my playbook
-- hosts: mumbai
+- hosts: dev
   user: ron
   become: yes
   gather_facts: yes
